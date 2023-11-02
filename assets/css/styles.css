@@ -1,4 +1,4 @@
-body{
+.wrapper{
     position: relative;
     overflow: hidden;
 }
@@ -8,32 +8,6 @@ body{
 /*|--- -- ---- -- ---|*/
 
 main{
-    width: 100vw;
-    height: 100vh;
-}
-
-main::after,
-main::before{
-    content: " ";
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-}
-
-main::before{
-    background: linear-gradient(0deg, #0e4c20 0%, #aded4d 100%);
-    top: -50px;
-    left: -50px;
-}
-
-main::after{
-    background: linear-gradient(90deg, #0e4c20 0%, #0db933 100%);
-    bottom: -50px;
-    right: -50px;
-}
-
-.wrapper{
     width: 100vw;
     height: 100vh;
     display: flex;
