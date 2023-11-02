@@ -149,7 +149,6 @@ main{
 @media screen and (max-width: 900px) {
     .wrapper{
         position: relative;
-        /* flex-direction: column; */
     }
 
     .login,
@@ -178,8 +177,11 @@ main{
         width: 300px;
     }
 
+    .login form a{
+        margin-top: 50px;
+    }
+
     .login form input[type=button]{
-        margin-top: 40px;
         padding: 12px 30px;
     }
 
