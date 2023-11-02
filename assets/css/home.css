@@ -214,6 +214,7 @@ main .welcome{
 
 .welcome .content .title h1 span{
     -webkit-text-stroke: 1px #57B470;
+    color: #57B470;
 }
 
 .welcome .content .title h1:last-child,
