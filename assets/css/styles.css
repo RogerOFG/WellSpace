@@ -78,8 +78,11 @@ main{
     margin-top: 20px;
 }
 
-.login form input[type=button]{
+.login form a{
     margin-top: 60px;
+}
+
+.login form input[type=button]{
     border-radius: 8px;
     border: none;
     padding: 14px 30px;
