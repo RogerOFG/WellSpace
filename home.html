@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellSpace - Home</title>
+
+    <link rel="stylesheet" href="./assets/css/general.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <picture>
+                <img src="./assets/img/IconoMenu.png" alt="">
+            </picture>
+
+            <nav>
+                <ul>
+                    <li> <a class="active" href="#">Inicio</a> </li>
+                    <li> <a href="#">Test</a> </li>
+                    <li> <a href="#">Secciones</a> </li>
+                    <li> <a href="#">Perfil</a> </li>
+                    <div class="marked"></div>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="welcome">
+                <div class="content">
+                    <div class="title">
+                        <h1>Recupera el control</h1>
+                        <h1>de tu bienestar emocional con <span>Well Space.</span></h1>
+                    </div>
+
+                    <div class="text">
+                        <p>Con Well Space, el autocuidado emocional se convierte en una prioridad en tu vida digital. Nuestra plataforma te brinda las herramientas, ayudándote a encontrar equilibrio y bienestar en tus interacciones en redes sociales.</p>
+                    </div>
+                </div>
+
+                <picture>
+                    <img src="./assets/img/home/Inicio.png" alt="">
+                </picture>
+            </div>
+
+            <div class="aboutUs">
+                <picture>
+                    <img src="./assets/img/home/IconoFull.png" alt="Imagen">
+                </picture>
+
+                <div class="content">
+                    <h3>¿Quienes Somos?</h3>
+
+                    <h2>WellSpace</h2>
+
+                    <p>
+                        En Well Space, estamos dedicados a ayudarte a encontrar el equilibrio emocional en un mundo 
+                        digital cada vez más conectado.  Proporcionando una plataforma integral que te ayude a 
+                        recuperar el control de tu bienestar emocional en línea. Creemos en el poder del autocuidado 
+                        y en la importancia de mantener una mente sana en el entorno digital actual.
+                    </p>
+                </div>
+            </div>
+
+            <div class="whatWeDo">
+                <span>Well Space: tu compañero en el viaje hacia el bienestar.</span>
+
+                <h3 class="title">¿Que hacemos?</h3>
+
+                <div class="content">
+                    <div class="box">
+                        <picture>
+                            <img src="./assets/img/home/icon-evaluacion.png" alt="">
+                        </picture>
+
+                        <h3>Evaluación Regular del Bienestar Emocional</h3>
+
+                        <p>
+                            Ofrecemos encuestas programadas y definidas que te permiten 
+                            realizar evaluaciones periódicas de tu bienestar emocional. 
+                            Esto te ayudará a mantenerte consciente de tu estado emocional 
+                            y a identificar áreas en las que puedes mejorar.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <picture>
+                            <img src="./assets/img/home/icon-terapeuta.png" alt="">
+                        </picture>
+
+                        <h3>Acceso a Profesionales de Salud Mental</h3>
+
+                        <p>
+                            Entendemos que a veces necesitas apoyo adicional. Por eso, te 
+                            brindamos la oportunidad de conectarte con profesionales de 
+                            salud mental registrados a través de sesiones de terapia virtual. 
+                            Esto te permite recibir orientación y apoyo profesional en un 
+                            entorno cómodo y seguro.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <picture>
+                            <img src="./assets/img/home/icon-book.png" alt="">
+                        </picture>
+
+                        <h3>Promoción del Autocuidado Emocional</h3>
+
+                        <p>
+                            Creemos en la importancia del autocuidado. Te ofrecemos recursos 
+                            educativos y orientación sobre cómo mejorar tu bienestar emocional 
+                            en línea. Promovemos la autorreflexión, la gestión de tu tiempo 
+                            en redes sociales y el equilibrio en tu vida digital.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <span>Developed and designed by WellSpace. ©2023. All rights reserved.</span>
+        </footer>
+    </div>
+
+    <script>
+        let list = document.querySelectorAll('nav ul li a');
+        let select = document.querySelectorAll('nav ul li');
+
+        list.forEach(function(item){
+            item.addEventListener('click', function(){
+                list.forEach(function(list){
+                    list.classList.remove('active');
+                });
+
+                item.classList.add('active');
+            });
+        });
+
+        select.forEach(function(item){
+            item.addEventListener('click', function(){
+                select.forEach(function(select){
+                    select.classList.remove('select');
+                });
+
+                item.classList.add('select');
+            });
+        });
+    </script>
+</body>
+</html>

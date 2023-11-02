@@ -1,0 +1,165 @@
+body{
+    position: relative;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+/*|--- -- ---- -- ---|*/
+/*|--- -- MAIN -- ---|*/
+/*|--- -- ---- -- ---|*/
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
+
+main::after,
+main::before{
+    content: " ";
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+main::before{
+    background: linear-gradient(0deg, #0e4c20 0%, #aded4d 100%);
+    top: -50px;
+    left: -50px;
+}
+
+main::after{
+    background: linear-gradient(90deg, #0e4c20 0%, #0db933 100%);
+    bottom: -50px;
+    right: -50px;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*|--- -- ----- -- ---|*/
+/*|--- -- LOGIN -- ---|*/
+/*|--- -- ----- -- ---|*/
+
+.login{
+    width: 440px;
+    height: 450px;
+    box-shadow: -1px 1px 5px #00000033;
+    border-radius: 15px;
+    background-color: #fff;
+    transform: translateX(40px);
+}
+
+.login form{
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login form span{
+    margin-top: 80px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.login form label{
+    position: relative;
+    color: #535353c0;
+}
+
+.login form label i{
+    position: absolute;
+    top: 17px;
+    left: 20px;
+}
+
+.login form label p{
+    position: absolute;
+    top: 13px;
+    left: 46px;
+}
+
+.login form input[type=email],
+.login form input[type=password]{
+    padding: 15px 10px 15px 60px;
+    width: 270px;
+    border: none;
+    border-left: 6px solid #0e4c20;
+    border-radius: 6px;
+    box-shadow: 1px 2px 5px #00000033;
+    outline: none;
+    font-size: 14px;
+}
+
+.login form label:nth-child(2){
+    margin-top: 50px;
+}
+
+.login form label:nth-child(3){
+    margin-top: 20px;
+}
+
+.login form input[type=button]{
+    margin-top: 60px;
+    border-radius: 8px;
+    border: none;
+    padding: 14px 30px;
+    background-color: #0e4c20;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login form input[type=button]:hover{
+    background-color: #026d19;
+    transition: .2s ease-in-out;
+}
+
+/*|--- -- -------- -- ---|*/
+/*|--- -- REGISTER -- ---|*/
+/*|--- -- -------- -- ---|*/
+
+.register{
+    width: 520px;
+    height: 550px;
+    border-radius: 15px;
+    background: linear-gradient(235deg, #BABC4A 0%, #000000 100%), linear-gradient(235deg, #0026AC 0%, #282534 100%), linear-gradient(235deg, #00FFD1 0%, #000000 100%), radial-gradient(120% 185% at 25% -25%, #EEEEEE 0%, #EEEEEE 40%, #7971EA calc(40% + 1px), #7971EA 50%, #393E46 calc(50% + 1px), #393E46 70%, #222831 calc(70% + 1px), #222831 100%), radial-gradient(70% 140% at 90% 10%, #F5F5C6 0%, #F5F5C6 30%, #7DA87B calc(30% + 1px), #7DA87B 60%, #326765 calc(60% + 1px), #326765 80%, #27253D calc(80% + 1px), #27253D 100%);
+    background-blend-mode: overlay, lighten, overlay, color-burn, normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.register img{
+    width: 200px;
+    padding-top: 130px;
+}
+
+.register p{
+    color: #fff;
+    padding-top: 50px;
+    font-size: 16px;
+}
+
+.register button{
+    margin-top: 60px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0e4c23;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register button:hover{
+    background-color: #026d19;  
+    transition: .2s ease-in-out;
+}
