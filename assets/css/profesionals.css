@@ -58,6 +58,7 @@ main hr{
 
 .boxBot .title{
     color: #0E6F28;
+    margin: 0 20px;
 }
 
 .boxBot .contentCards{
@@ -146,7 +147,7 @@ main hr{
 
 .card .bottom {
     position: absolute;
-    bottom: 3px;
+    bottom: 0px;
     left: 3px;
     right: 3px;
     background: #fff;
@@ -196,8 +197,6 @@ main hr{
     font-size: 0.9rem;
     color: white;
     margin-top: .5rem;
-    /* overflow: hidden;
-    text-overflow: ellipsis; */
     overflow: auto;
     height: 70px;
 }
@@ -279,4 +278,20 @@ main hr{
     -o-object-position: 0px 25px;
     object-position: 0px 25px;
     transition: all 0.5s ease-in-out 0.5s;
+}
+
+/*|--- -- ---------- -- ---|*/
+/*|--- -- RESPONSIVE -- ---|*/
+/*|--- -- ---------- -- ---|*/
+
+@media screen and (max-width: 900px) {
+    .boxTop{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .boxTop picture img{
+        width: 300px;
+    }
 }
