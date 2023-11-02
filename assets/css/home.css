@@ -1,153 +1,8 @@
-body{
-    background-color: #f8f8f8;
-}
-
 .wrapper{
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 100%;
-}
-
-/*|--- -- ------ -- ---|*/
-/*|--- -- HEADER -- ---|*/
-/*|--- -- ------ -- ---|*/
-
-header{
-    width: 100%;
-    background-color: #f8f8f8;
-    height: auto;
-    box-shadow: 0px .1px 5px #00000033;
-    padding-bottom: 20px;
-    position: fixed;
-    z-index: 1;
-}
-
-/*|--- -- HEADER - PICTURE -- ---|*/
-
-header picture{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-header picture img{
-    margin-top: 30px;
-    width: 105px;
-}
-
-/*|--- -- HEADER - NAV -- ---|*/
-
-header nav{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul{
-    position: relative;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-
-header nav li a{
-    font-family: sans-serif;
-    text-transform: uppercase;
-    color: #0E6F28;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.marked{
-    position: absolute;
-    width: 60px;
-    height: 30px;
-    background-color: #0E6F28;
-    border-radius: 20px;
-    top: -4px;
-    left: -9.5px;
-    cursor: pointer;
-    z-index: -1;
-    transition: .3s ease-in-out;
-}
-
-ul li:nth-child(2):hover + ul li:first-child a{
-    color: #0e4c20;
-}
-
-nav ul li:nth-child(2):hover a,
-nav ul li:nth-child(2):hover ~ .marked,
-nav ul li:nth-child(2).select ~ .marked{
-    transform: translateX(calc(90px * 1));
-    color: #fff;
-}
-
-nav ul li:nth-child(3):hover a,
-nav ul li:nth-child(3):hover ~ .marked,
-nav ul li:nth-child(3).select ~ .marked{
-    width: 110px;
-    transform: translateX(calc(87px * 2));
-    color: #fff;
-}
-
-nav ul li:nth-child(4):hover a,
-nav ul li:nth-child(4):hover ~ .marked,
-nav ul li:nth-child(4).select ~ .marked{
-    width: 70px;
-    transform: translateX(calc(103px * 3));
-    color: #fff;
-}
-
-/* CONDICIONALES REVERSA - CASO: 2DO HIJO*/
-
-nav ul li:nth-child(1):hover a,
-nav ul li:nth-child(1):hover ~ .marked,
-nav ul li:nth-child(2).select:hover ~ .marked{
-    color: #fff;
-    width: 60px;
-    transform: translateX(0px);
-}
-
-nav ul li:nth-child(2).select:hover ~ .marked{
-    transform: translateX(calc(90px * 1));
-}
-
-/* CONDICIONALES REVERSA - CASO: 3ER HIJO*/
-
-nav ul li:nth-child(2):hover a,
-nav ul li:nth-child(2):hover ~ .marked,
-nav ul li:nth-child(3).select:hover ~ .marked{
-    width: 60px;
-    transform: translateX(calc(90px * 1));
-}
-
-nav ul li:nth-child(3).select:hover ~ .marked{
-    width: 110px;
-    transform: translateX(calc(87px * 2));
-}
-
-/* CONDICIONALES REVERSA - CASO: 3ER HIJO*/
-
-nav ul li:nth-child(3):hover a,
-nav ul li:nth-child(3):hover ~ .marked,
-nav ul li:nth-child(4).select:hover ~ .marked{
-    width: 110px;
-    transform: translateX(calc(87px * 2));
-}
-
-nav ul li:nth-child(4).select:hover ~ .marked{
-    width: 70px;
-    transform: translateX(calc(103px * 3));
-}
-
-/* FIN CONDICIONALES REVERSA */
-
-.active{
-    color: #fff;
-    text-shadow: 2px 2px 3px #0E6F28;
 }
 
 /*|--- -- ---- -- ---|*/
@@ -160,31 +15,6 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-/*|--- -- MAIN - CIRCULOS -- ---|*/
-
-main::after,
-main::before{
-    content: " ";
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-main::before{
-    position: fixed;
-    background: linear-gradient(0deg, #0e4c20 0%, #aded4d 100%);
-    top: -50px;
-    left: -50px;
-    z-index: 1;
-}
-
-main::after{
-    position: absolute;
-    background: linear-gradient(90deg, #0e4c20 0%, #0db933 100%);
-    top: 860px;
-    right: -50px;
 }
 
 /*|--- -- MAIN - WELCOME -- ---|*/
@@ -214,6 +44,7 @@ main .welcome{
 
 .welcome .content .title h1 span{
     -webkit-text-stroke: 1px #57B470;
+    color: #57B470;
 }
 
 .welcome .content .title h1:last-child,
@@ -328,22 +159,9 @@ main .welcome{
     font-size: 16px;
 }
 
-/*|--- -- ------ -- ---|*/
-/*|--- -- FOOTER -- ---|*/
-/*|--- -- ------ -- ---|*/
-
-footer{
-    width: 100%;
-    height: 80px;
-    background-color: #01161E;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 14px;
-    font-style: italic;
-    padding: 0 20px;
-}
+/*|--- -- ---------- -- ---|*/
+/*|--- -- RESPONSIVE -- ---|*/
+/*|--- -- ---------- -- ---|*/
 
 @media screen and (max-width: 1200px) {
     main::after{
@@ -356,7 +174,7 @@ footer{
         top: 650px;
     }
     
-    .welcome picture img{
+    .welcome picture img{ 
         width: 500px;
     }
 }
@@ -377,11 +195,6 @@ footer{
 
     .welcome picture{
         margin-top: 20px;
-    }
-
-    footer{
-        font-size: 12px;
-        text-align: center;
     }
 }
 
