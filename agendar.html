@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WellSpace - Agendar Seccion</title>
+
+    <link rel="icon" href="./assets/img/home/IconoFull.ico">
+
+    <link rel="stylesheet" href="./assets/css/general.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <picture>
+                <img src="./assets/img/IconoMenu.png" alt="">
+            </picture>
+
+            <nav>
+                <ul>
+                    <li> <a href="./home.html">Inicio</a> </li>
+                    <li> <a href="./test.html">Test</a> </li>
+                    <li class="select"> <a class="active" href="./profesionals.html">Secciones</a> </li>
+                    <li> <a href="#">Perfil</a> </li>
+                    <div class="marked"></div>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="box">
+                
+            </div>
+        </main>
+
+        <!-- <footer>
+            <span>Developed and designed by WellSpace. ©2023. All rights reserved.</span>
+        </footer> -->
+    </div>
+
+    <script>
+        let list = document.querySelectorAll('nav ul li a');
+        let select = document.querySelectorAll('nav ul li');
+
+        list.forEach(function(item){
+            item.addEventListener('click', function(){
+                list.forEach(function(list){
+                    list.classList.remove('active');
+                });
+
+                item.classList.add('active');
+            });
+        });
+
+        select.forEach(function(item){
+            item.addEventListener('click', function(){
+                select.forEach(function(select){
+                    select.classList.remove('select');
+                });
+
+                item.classList.add('select');
+            });
+        });
+    </script>
+
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

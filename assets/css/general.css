@@ -47,7 +47,7 @@ main::before{
     background: linear-gradient(0deg, #0e4c20 0%, #aded4d 100%);
     top: -50px;
     left: -50px;
-    z-index: 1;
+    z-index: 10;
 }
 
 main::after{
