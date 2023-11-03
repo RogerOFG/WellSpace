@@ -29,6 +29,7 @@ main{
     box-shadow: 1px 0px 3px #00000049;
     width: 366px;
     height: 550px;
+    z-index: 1;
 }
 
 /*|--- -- BOX - BOX CALENDAR - CALENDAR -- ---|*/
@@ -262,11 +263,9 @@ main{
 @media screen and (max-width: 748px) {
     .boxCalendar .calendar{
         border-radius: 12px 12px 0 0;
-        z-index: 1;
     }
     
     .boxCalendar .hours{
         border-radius: 0 0 12px 12px;
-        z-index: 1;
     }
 }
