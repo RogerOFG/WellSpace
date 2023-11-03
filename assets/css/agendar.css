@@ -17,17 +17,27 @@ main{
 
 .calendar,
 .hours{
-    /* border: 1px solid; */
     box-shadow: 1px 0px 3px #00000049;
     width: 366px;
-    /* height: 540px; */
+    height: 550px;
+}
+
+.calendar{
+    text-align: center;
+    background-color: #0E6F28;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.calendar .contentCalendar{
+    padding: 0 16px;
 }
 
 .hours{
     background-color: #fff;
     padding: 30px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .hours h3{
@@ -124,7 +134,7 @@ main{
     height: 32px;
     border-radius: 7px;
     float: right;
-    margin-top: 15px;
+    margin-top: 22px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -139,30 +149,32 @@ main{
 
 
 /*|--- -- Estilos para el calendario -- ---|*/
-#calendar {
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 #header {
     display: flex;
-    justify-content: space-between;
-    background-color: #f0f0f0;
-    padding: 10px;
+    justify-content: center;
+    background-color: #0E6F28;
+    margin-top: 10px;
+    margin-bottom: 22px;
     font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    -webkit-text-stroke: .5px;
+    letter-spacing: 1px;
 }
 
 #prevMonthBtn, #nextMonthBtn {
+    color: #ffffffc0;
     font-size: 20px;
     cursor: pointer;
     outline: none;
     border: none;
     background: none;
+    padding-top: 2px;
 }
 
 #weekdays {
-    background-color: #f0f0f0;
+    background-color: #0E6F28;
+    color: #fff;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
@@ -170,36 +182,44 @@ main{
 
 #weekdays div {
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 #days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+    gap: 10px;
     grid-auto-rows: 33px;
     margin-top: 5px; 
     margin-left: 5px;
+    color: #fff;
 }
 
 .day, .empty-day {
-    border: 1px solid #ccc;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 33px;
     height: 33px;
+    font-weight: bold;
+}
+
+.empty-day::before{
+    content: "-";
+    color: #c4f9b950;
 }
 
 .current-day {
-    background-color: #000;
     color: #fff;
 }
 
 .past-day {
-    background-color: rgba(0, 0, 0, 0.2);
+    color: #c4f9b950;
 }
 
 .chooseDay{
-    background-color: #0E6F28;
+    color: #0E6F28;
+    -webkit-text-stroke: 1px #0E6F28;
+    background-color: #fff;
 }
