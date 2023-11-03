@@ -20,7 +20,7 @@ main{
     /* border: 1px solid; */
     box-shadow: 1px 0px 3px #00000049;
     width: 366px;
-    height: 540px;
+    /* height: 540px; */
 }
 
 .hours{
@@ -127,4 +127,79 @@ main{
     margin-top: 15px;
     font-size: 16px;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/*|--- -- Estilos para el calendario -- ---|*/
+#calendar {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#prevMonthBtn, #nextMonthBtn {
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+#weekdays {
+    background-color: #f0f0f0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+#weekdays div {
+    font-weight: bold;
+}
+
+#days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    grid-auto-rows: 33px;
+    margin-top: 5px; 
+    margin-left: 5px;
+}
+
+.day, .empty-day {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+}
+
+.current-day {
+    background-color: #000;
+    color: #fff;
+}
+
+.past-day {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.chooseDay{
+    background-color: #0E6F28;
 }

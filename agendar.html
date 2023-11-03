@@ -35,8 +35,26 @@
                 <h2>Agendar Sección</h2>
 
                 <div class="boxCalendar">
-                    <div class="calendar">
-
+                    <div class="calendar" id="calendar">
+                        <div id="header">
+                            <button id="prevMonthBtn">
+                                <ion-icon name="caret-back-outline"></ion-icon>
+                            </button>
+                            <span id="currentMonth"></span>
+                            <button id="nextMonthBtn">
+                                <ion-icon name="caret-forward-outline"></ion-icon>
+                            </button>
+                        </div>
+                        <div id="weekdays">
+                            <div>LUN</div>
+                            <div>MAR</div>
+                            <div>MIÉ</div>
+                            <div>JUE</div>
+                            <div>VIE</div>
+                            <div>SÁB</div>
+                            <div>DOM</div>
+                        </div>
+                        <div id="days"></div>
                     </div>
 
                     <div class="hours">
@@ -99,32 +117,9 @@
                 item.classList.add('select');
             });
         });
-
-        // ---| INICIO SACAR TEXTO DEL SELECT
-        var option = document.getElementById("selectTime");
-        var timeSeccion = document.getElementById("timeSeccion");
-
-        // Agregamos un evento 'change' al option para detectar cuando cambia la opción seleccionada
-        option.addEventListener("change", function() {
-            // Actualizamos el contenido del span con el valor de la opción seleccionada
-            timeSeccion.textContent = option.options[option.selectedIndex].value;
-        });
-        // ---| FIN SACAR TEXTO DEL SELECT
-
-        // ---| INICIO ESCOGER HORARIO
-        var choose = document.querySelectorAll('.contentHours .setTime .hour');
-
-        choose.forEach(function(item){
-            item.addEventListener('click', function(){
-                choose.forEach(function(choose){
-                    choose.classList.remove('choose');
-                });
-
-                item.classList.add('choose');
-            });
-        });
-        // ---| FIN ESCOGER HORARIO
     </script>
+
+    <script src="./assets/js/agendar.js"></script>
 
     <!-- IONICONS -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
