@@ -99,15 +99,19 @@ choose.forEach(function (item) {
 //TODO: FIN ESCOGER HORARIO ---|
 
 //! ---| INICIO ESCOGER FECHA
-var chooseDay = document.querySelectorAll('.current-day');
+var daysContainer = document.getElementById('days');
 
-chooseDay.forEach(function(item){
-    item.addEventListener('click', function(){
-        chooseDay.forEach(function(chooseDay){
-            chooseDay.classList.remove('chooseDay');
+daysContainer.addEventListener('click', function(event) {
+    var target = event.target;
+    if (target.classList.contains('current-day')) {
+        var allCurrentDays = document.querySelectorAll('.current-day');
+
+        allCurrentDays.forEach(function(currentDay) {
+            currentDay.classList.remove('chooseDay');
         });
 
-        item.classList.add('chooseDay');
-    });
+        target.classList.add('chooseDay');
+    }
 });
+
 //Todo: FIN ESCOGER FECHA ---|

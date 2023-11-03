@@ -53,7 +53,7 @@ main{
     height: 100px;
     border-radius: 50%;
     border: 2px solid #fff;
-    margin-top: 32px;
+    margin-top: 28px;
     margin-bottom: 12px;
     overflow: hidden;
 }
@@ -63,7 +63,7 @@ main{
 }
 
 .calendar .perfil span{
-    margin-bottom: 33px;
+    margin-bottom: 28px;
     color: #fff;
     -webkit-text-stroke: .1px;
 }
