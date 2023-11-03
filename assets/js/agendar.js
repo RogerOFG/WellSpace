@@ -71,7 +71,7 @@ function buildCalendar() {
 }
 
 buildCalendar();
-//TODO: ---| FIN CALENDARIO
+//TODO: FIN CALENDARIO ---|
 
 
 //! ---| INICIO SACAR TEXTO DEL SELECT
@@ -81,7 +81,7 @@ var timeSeccion = document.getElementById("timeSeccion");
 option.addEventListener("change", function () {
     timeSeccion.textContent = option.options[option.selectedIndex].value;
 });
-//TODO: ---| FIN SACAR TEXTO DEL SELECT
+//TODO: FIN SACAR TEXTO DEL SELECT ---|
 
 
 //! ---| INICIO ESCOGER HORARIO
@@ -96,7 +96,7 @@ choose.forEach(function (item) {
         item.classList.add('choose');
     });
 });
-//TODO: ---| FIN ESCOGER HORARIO
+//TODO: FIN ESCOGER HORARIO ---|
 
 //! ---| INICIO ESCOGER FECHA
 var chooseDay = document.querySelectorAll('.current-day');
@@ -110,4 +110,4 @@ chooseDay.forEach(function(item){
         item.classList.add('chooseDay');
     });
 });
-//Todo: ---| FIN ESCOGER FECHA
+//Todo: FIN ESCOGER FECHA ---|
