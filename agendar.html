@@ -9,7 +9,7 @@
     <link rel="icon" href="./assets/img/home/IconoFull.ico">
 
     <link rel="stylesheet" href="./assets/css/general.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/agendar.css">
 </head>
 <body>
 
@@ -32,7 +32,42 @@
 
         <main>
             <div class="box">
-                
+                <h2>Agendar Sección</h2>
+
+                <div class="boxCalendar">
+                    <div class="calendar">
+
+                    </div>
+
+                    <div class="hours">
+                        <h3>Tipo de Seccion</h3>
+                        <select name="" id="selectTime">
+                            <option value="40 minutos">De paga (40 minutos)</option>
+                            <option value="20 minutos">Gratuita (20 minutos)</option>
+                        </select>
+
+                        <h3>Duracion de la Sección</h3>
+                        <div class="duration">
+                            <span id="timeSeccion">40 minutos</span>
+                        </div>
+
+                        <div class="contentHours">
+                            <span>¿A que hora puedes?</span>
+
+                            <div class="setTime">
+                                <div class="hour">14:00</div>
+                                <div class="hour">15:00</div>
+                                <div class="hour">16:00</div>
+                                <div class="hour">17:00</div>
+                                <div class="hour">18:00</div>
+                                <div class="hour">19:00</div>
+                                <div class="hour">20:00</div>
+                            </div>
+
+                            <input type="button" value="Programar seccion" placeholder="Programar seccion">
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -64,6 +99,31 @@
                 item.classList.add('select');
             });
         });
+
+        // ---| INICIO SACAR TEXTO DEL SELECT
+        var option = document.getElementById("selectTime");
+        var timeSeccion = document.getElementById("timeSeccion");
+
+        // Agregamos un evento 'change' al option para detectar cuando cambia la opción seleccionada
+        option.addEventListener("change", function() {
+            // Actualizamos el contenido del span con el valor de la opción seleccionada
+            timeSeccion.textContent = option.options[option.selectedIndex].value;
+        });
+        // ---| FIN SACAR TEXTO DEL SELECT
+
+        // ---| INICIO ESCOGER HORARIO
+        var choose = document.querySelectorAll('.contentHours .setTime .hour');
+
+        choose.forEach(function(item){
+            item.addEventListener('click', function(){
+                choose.forEach(function(choose){
+                    choose.classList.remove('choose');
+                });
+
+                item.classList.add('choose');
+            });
+        });
+        // ---| FIN ESCOGER HORARIO
     </script>
 
     <!-- IONICONS -->
