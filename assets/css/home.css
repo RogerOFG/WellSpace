@@ -1,3 +1,68 @@
+body{
+    position: relative;
+}
+
+.saludo{
+    position: fixed;
+    bottom: -11px;
+    right: 180px;
+    z-index: 100;
+    transition: .3s ease-in-out;
+}
+
+
+
+.saludo .close{
+    color: #0e4c20;
+    font-size: 30px;
+}
+
+.saludo .close ion-icon{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px #00000065;
+}
+
+.saludo img{
+    width: 200px;
+}
+
+.burbuja{
+    position: absolute;
+    top: -90px;
+    right: -170px;
+    background-color: #57B470;
+    width: 250px;
+    height: 120px;
+    border-radius: 50% 40% 50% 45%;
+    border-right: 1px solid;
+}
+
+.burbuja::before{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    border: solid transparent;
+    border-top-color: #57B470;
+    border-top-width: 45px;
+    border-bottom-width: 28px;
+    border-left-width: 9px;
+    border-right-width: 30px;
+    border-radius: 50px;
+}
+
+.saludo span{
+    position: absolute;
+    top: 25px;
+    padding: 0 20px;
+    width: auto;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
 /*|--- -- ---- -- ---|*/
 /*|--- -- MAIN -- ---|*/
 /*|--- -- ---- -- ---|*/
