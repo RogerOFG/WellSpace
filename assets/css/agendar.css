@@ -1,11 +1,22 @@
+/*|--- -- ---- -- ---|*/
+/*|--- -- MAIN -- ---|*/
+/*|--- -- ---- -- ---|*/
+
 main{
     margin-top: 250px;
+    margin-bottom: 100px;
     border: 1px solid;
 }
+
+/*|--- -- --- -- ---|*/
+/*|--- -- BOX -- ---|*/
+/*|--- -- --- -- ---|*/
 
 .box h2{
     text-align: center;
 }
+
+/*|--- -- BOX - BOX CALENDAR -- ---|*/
 
 .boxCalendar{
     border: 1px solid;
@@ -15,12 +26,14 @@ main{
     margin-top: 40px;
 }
 
-.calendar,
-.hours{
+.boxCalendar .calendar,
+.boxCalendar .hours{
     box-shadow: 1px 0px 3px #00000049;
     width: 366px;
     height: 550px;
 }
+
+/*|--- -- BOX - BOX CALENDAR - CALENDAR -- ---|*/
 
 .calendar{
     text-align: center;
@@ -29,9 +42,119 @@ main{
     border-bottom-left-radius: 12px;
 }
 
+.calendar .perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.calendar .perfil .image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.calendar .perfil .image img{
+    width: 100px;
+}
+
+.calendar .perfil span{
+    margin-bottom: 33px;
+    color: #fff;
+    -webkit-text-stroke: .1px;
+}
+
+/*!|--- -- Estilos para el calendario -- ---|!*/
+
 .calendar .contentCalendar{
     padding: 0 16px;
 }
+
+#header {
+    display: flex;
+    justify-content: center;
+    background-color: #0E6F28;
+    margin-top: 10px;
+    margin-bottom: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    -webkit-text-stroke: .5px;
+    letter-spacing: 1px;
+}
+
+#prevMonthBtn, #nextMonthBtn {
+    color: #ffffffc0;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    padding-top: 2px;
+}
+
+#weekdays {
+    background-color: #0E6F28;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+#weekdays div {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    grid-auto-rows: 33px;
+    margin-top: 5px; 
+    margin-left: 5px;
+    color: #fff;
+}
+
+.day, .empty-day {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.empty-day::before{
+    content: "-";
+    color: #c4f9b950;
+    cursor: help;
+}
+
+.current-day {
+    color: #fff;
+    cursor: pointer;
+}
+
+.past-day {
+    color: #c4f9b950;
+    cursor: help;
+}
+
+.chooseDay{
+    color: #0E6F28;
+    -webkit-text-stroke: 1px #0E6F28;
+    background-color: #fff;
+}
+
+/*|--- -- BOX - BOX CALENDAR - HOURS -- ---|*/
 
 .hours{
     background-color: #fff;
@@ -41,7 +164,6 @@ main{
 }
 
 .hours h3{
-    /* font-size: 16px; */
     margin-bottom: 7px;
 }
 
@@ -137,89 +259,4 @@ main{
     margin-top: 22px;
     font-size: 16px;
     cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-/*|--- -- Estilos para el calendario -- ---|*/
-#header {
-    display: flex;
-    justify-content: center;
-    background-color: #0E6F28;
-    margin-top: 10px;
-    margin-bottom: 22px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    -webkit-text-stroke: .5px;
-    letter-spacing: 1px;
-}
-
-#prevMonthBtn, #nextMonthBtn {
-    color: #ffffffc0;
-    font-size: 20px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background: none;
-    padding-top: 2px;
-}
-
-#weekdays {
-    background-color: #0E6F28;
-    color: #fff;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-}
-
-#weekdays div {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    grid-auto-rows: 33px;
-    margin-top: 5px; 
-    margin-left: 5px;
-    color: #fff;
-}
-
-.day, .empty-day {
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 33px;
-    height: 33px;
-    font-weight: bold;
-}
-
-.empty-day::before{
-    content: "-";
-    color: #c4f9b950;
-}
-
-.current-day {
-    color: #fff;
-}
-
-.past-day {
-    color: #c4f9b950;
-}
-
-.chooseDay{
-    color: #0E6F28;
-    -webkit-text-stroke: 1px #0E6F28;
-    background-color: #fff;
 }
