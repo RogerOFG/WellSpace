@@ -158,7 +158,6 @@ main{
     box-shadow: 1px 0px 3px #00000049;
     width: 366px;
     height: 550px;
-    z-index: 1;
 }
 
 /*|--- -- BOX - BOX CALENDAR - CALENDAR -- ---|*/
@@ -396,5 +395,11 @@ main{
     
     .boxCalendar .hours{
         border-radius: 0 0 12px 12px;
+    }
+}
+
+@media screen and (max-width: 731px) {
+    .box .titleAgendar{
+        width: 366px;
     }
 }

@@ -55,6 +55,7 @@ main::after{
     background: linear-gradient(90deg, #0e4c20 0%, #0db933 100%);
     top: 860px;
     right: -50px;
+    z-index: -1;
 }
 
 /*|--- -- ------ -- ---|*/
