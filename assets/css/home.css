@@ -38,7 +38,7 @@ body{
     width: 250px;
     height: 120px;
     border-radius: 50% 40% 50% 45%;
-    border-right: 1px solid;
+    border-right: 1px solid #000;
 }
 
 .burbuja::before{
