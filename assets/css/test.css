@@ -57,10 +57,19 @@ main{
     justify-content: center;
 }
 
+.mainRight .contentRight{
+    /* border: 1px solid; */
+    border-radius: 15px;
+    box-shadow: 0px 1px 3px #0e6f284f;
+    padding: 20px 0;
+}
+
 /*|--- -- MAIN - MAIN RIGHT - ASK -- ---|*/
 
-.ask span{
-
+.ask p{
+    font-size: 18px;
+    text-indent: -19px;
+    margin-left: 19px;
 }
 
 /*|--- -- MAIN - MAIN RIGHT - ANSWER -- ---|*/
