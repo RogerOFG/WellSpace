@@ -5,13 +5,12 @@
 .pageInstructions{
     width: 570px;
     max-width: 99%;
-    position: relative;
     border: 1px solid #00000027;
-    position: absolute;
     background-color: #f8f8f8;
     padding: 25px;
     border-radius: 15px;
-    top: 50%;
+    position: absolute;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;

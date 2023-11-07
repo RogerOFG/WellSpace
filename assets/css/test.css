@@ -1,24 +1,24 @@
 /*|--- -- ---- -- ---|*/
 /*|--- -- MAIN -- ---|*/
 /*|--- -- ---- -- ---|*/
-
 main{
     margin-top: 250px;
     display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+main::after{
+    display: none;
 }
 
 /*|--- -- MAIN - MAIN LEFT -- ---|*/
 
 .mainLeft{
-    /* border: 1px solid; */
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.mainLeft picture img{
-    width: 300px;
 }
 
 .mainLeft div:first-child{
@@ -28,37 +28,94 @@ main{
     width: 500px;
     max-width: 100%;
     color: #0E6F28;
+    text-align: center;
 }
 
-.mainLeft div:last-child{
+.mainLeft picture img{
+    width: 300px;
+    max-width: 99%;
+}
+
+.mainLeft .titleBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.mainLeft .menuPreguntas{
+    border-radius: 8px;
     padding: 20px 30px;
-    font-size: 16px;
-    width: 500px;
-    max-width: 100%;
+    background-color: #19ac40;
+    box-shadow: 1px 1px 3px #0e6f284f;
+    max-width: 240px;
+    text-align: center;
+}
+
+.mainLeft .menuPreguntas ion-icon{
+    color: #0E6F28;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 2px 1px 3px #0E6F28;
+}
+
+.mainLeft .menuPreguntas ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.mainLeft .menuPreguntas li a{
+    color: #fff;
+    font-weight: bolder;
+    padding: 2px 8px;
+    border-radius: 50%;
+    transition: .1s ease-in-out;
+}
+
+.menuPreguntas ul li a.opActive{
+    color: #0E6F28;
+    background-color: #fff;
+    -webkit-text-stroke: 1px;
 }
 
 /*|--- -- MAIN - MAIN RIGHT -- ---|*/
 
 .mainRight{
-    /* border: 1px solid; */
-    width: 500px;
     max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.mainRight .formContentAsk{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}  
+
+.formContentAsk.hide{
+    display: none;
 }
 
 .mainRight .ask{
-    /* border: 1px solid; */
     padding: 0 20px;
 }
 
 .mainRight .answer{
-    /* border: 1px solid; */
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
 .mainRight .contentRight{
-    /* border: 1px solid; */
     border-radius: 15px;
     box-shadow: 0px 1px 3px #0e6f284f;
     padding: 20px 0;
@@ -67,7 +124,7 @@ main{
 /*|--- -- MAIN - MAIN RIGHT - ASK -- ---|*/
 
 .ask p{
-    font-size: 18px;
+    font-size: 17px;
     text-indent: -19px;
     margin-left: 19px;
 }
@@ -75,7 +132,6 @@ main{
 /*|--- -- MAIN - MAIN RIGHT - ANSWER -- ---|*/
 
 .answer .contentAnswer{
-    /* border: 1px solid; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -93,6 +149,7 @@ main{
     height: 20px;
     border: 2px solid #0E6F28;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .answer .contentAnswer input[type="radio"].custom-radio:checked {
@@ -101,4 +158,34 @@ main{
 
 .answer .contentAnswer input[type="radio"].custom-radio:focus {
     outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .mainLeft{
+        width: 40%;
+    }
+
+    .mainRight{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .mainLeft picture img{
+        width: 200px;
+    }
+
+    .mainLeft,
+    .mainRight{
+        width: 100%;
+    }
+
+    .mainLeft{
+        margin-bottom: 20px;
+    }
+
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
 }

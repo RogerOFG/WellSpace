@@ -39,38 +39,309 @@
                     <img src="./assets/img/test/test.png" alt="img">
                 </picture>
 
-                <div>
-                    Aquí, no hay respuestas correctas ni incorrectas. Te 
-                    animamos a responder con sinceridad y a tomarte el tiempo 
-                    que necesites. <br> 
-                    Tus respuestas son confidenciales y se utilizarán para 
-                    brindarte orientación personalizada. Gracias por dar este 
-                    paso hacia un mayor equilibrio emocional :)
+                <div class="titleBox">
+                    <h3>Paginado de Preguntas</h3>
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+
+                <!-- MENU DE LAS PREGUNTAS -->
+                <div class="menuPreguntas" id="menuPreguntas">
+                    <ion-icon name="book-outline"></ion-icon>
+                    <ul>
+                        <li><a href="#" class="seleccionarPregunta opActive" data-pregunta="1">1</a></li>
+                        <li><a href="#" class="seleccionarPregunta" data-pregunta="2">2</a></li>
+                        <li><a href="#" class="seleccionarPregunta" data-pregunta="3">3</a></li>
+                        <li><a href="#" class="seleccionarPregunta" data-pregunta="4">4</a></li>
+                        <!-- Agrega más elementos de lista para otras preguntas -->
+                    </ul>
                 </div>
             </div>
 
+            <!-- Caja Preguntas -->
             <div class="mainRight">
-                <div class="contentRight">
-                    <div class="ask">
-                        <p>1. He comprendido bien las instrucciones para contestar al cuestionario:</p>
+                <div class="formContentAsk">
+                    <!-- Cuerpo de Pregunta -->
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>1. He comprendido bien las instrucciones para contestar al cuestionario:</p>
+                        </div>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>2. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
+                        </div>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>3. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
+                        </div>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="formContentAsk hide">
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>4. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
+                        </div>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
                     </div>
 
-                    <form class="answer">
-                        <div class="contentAnswer">
-                            <span>Si</span>
-                            <input type="radio" name="opciones" value="1" class="custom-radio">
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>5. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
                         </div>
 
-                        <div class="contentAnswer">
-                            <span>No estoy seguro</span>
-                            <input type="radio" name="opciones" value="2" class="custom-radio">
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>6. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
+                        </div>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="formContentAsk hide">
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>7. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
+                        </div>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>8. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
                         </div>
 
-                        <div class="contentAnswer">
-                            <span>No</span>
-                            <input type="radio" name="opciones" value="3" class="custom-radio">
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>9. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
                         </div>
-                    </form>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="formContentAsk hide">
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>10. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
+                        </div>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>11. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
+                        </div>
+
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contentRight">
+                        <div class="ask">
+                            <p>12. Estoy dispuesto a contestar todas las cuestiones con sinceridad:</p>
+                        </div>
+                    
+                        <form class="answer">
+                            <div class="contentAnswer">
+                                <span>Si</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No estoy seguro</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                    
+                            <div class="contentAnswer">
+                                <span>No</span>
+                                <input type="radio" name="opciones" value="0" class="custom-radio">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
@@ -81,5 +352,42 @@
     </div>
 
     <script src="./assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const botonesSiguiente = document.querySelectorAll('.formContentAsk');
+            const menuPreguntas = document.getElementById('menuPreguntas');
+
+            menuPreguntas.addEventListener('click', function (e) {
+                if (e.target.classList.contains('seleccionarPregunta')) {
+                    const numeroPregunta = e.target.getAttribute('data-pregunta');
+
+                    // Oculta todas las preguntas
+                    botonesSiguiente.forEach(function (pregunta) {
+                        pregunta.classList.add('hide');
+                    });
+
+                    // Muestra la pregunta seleccionada
+                    botonesSiguiente[numeroPregunta - 1].classList.remove('hide');
+                }
+            });
+        });
+
+        var opMenu = document.querySelectorAll('.seleccionarPregunta');
+
+        opMenu.forEach(function(item){
+            item.addEventListener('click', function(){
+                opMenu.forEach(function(opMenu){
+                    opMenu.classList.remove('opActive');
+                });
+
+                item.classList.add('opActive');
+            })
+        })
+    </script>
+
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
