@@ -121,6 +121,23 @@ main::after{
     padding: 20px 0;
 }
 
+.mainRight .formContentAsk .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainRight .formContentAsk .button button{
+    padding: 8px 40px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    background-color: #0E6F28;
+    font-weight: bolder;
+    box-shadow: 1px 1px 3px #0e6f284f;
+    cursor: pointer;
+}
+
 /*|--- -- MAIN - MAIN RIGHT - ASK -- ---|*/
 
 .ask p{
