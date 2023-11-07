@@ -3,6 +3,8 @@
 }
 
 .pageInstructions{
+    width: 570px;
+    max-width: 99%;
     position: relative;
     border: 1px solid #00000027;
     position: absolute;
@@ -51,6 +53,8 @@
     font-weight: bold;
     transition: .3s ease-in-out;
     cursor: pointer;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px #ffffff7c;
 }
 
 .pageInstructions.hidden{
