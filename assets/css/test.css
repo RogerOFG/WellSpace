@@ -5,8 +5,91 @@
 main{
     margin-top: 250px;
     display: flex;
+}
+
+/*|--- -- MAIN - MAIN LEFT -- ---|*/
+
+.mainLeft{
+    /* border: 1px solid; */
+    width: 50%;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
+.mainLeft picture img{
+    width: 300px;
+}
+
+.mainLeft div:first-child{
+    padding: 0px 30px;
+    font-size: 17px;
+    font-weight: bolder;
+    width: 500px;
+    max-width: 100%;
+    color: #0E6F28;
+}
+
+.mainLeft div:last-child{
+    padding: 20px 30px;
+    font-size: 16px;
+    width: 500px;
+    max-width: 100%;
+}
+
+/*|--- -- MAIN - MAIN RIGHT -- ---|*/
+
+.mainRight{
+    /* border: 1px solid; */
+    width: 500px;
+    max-width: 100%;
+}
+
+.mainRight .ask{
+    /* border: 1px solid; */
+    padding: 0 20px;
+}
+
+.mainRight .answer{
+    /* border: 1px solid; */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/*|--- -- MAIN - MAIN RIGHT - ASK -- ---|*/
+
+.ask span{
+
+}
+
+/*|--- -- MAIN - MAIN RIGHT - ANSWER -- ---|*/
+
+.answer .contentAnswer{
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.answer .contentAnswer span{
+    margin-bottom: 10px;
+}
+
+.answer .contentAnswer input[type="radio"].custom-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0E6F28;
+    border-radius: 50%;
+}
+
+.answer .contentAnswer input[type="radio"].custom-radio:checked {
+    background-color: #0E6F28;
+}
+
+.answer .contentAnswer input[type="radio"].custom-radio:focus {
+    outline: none;
+}
