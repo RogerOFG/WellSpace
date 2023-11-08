@@ -10,51 +10,84 @@ main{
     justify-content: center;
 }
 
-/*|--- -- ----- -- ---|*/
-/*|--- -- LOGIN -- ---|*/
-/*|--- -- ----- -- ---|*/
+/*|--- -- ------------ -- ---|*/
+/*|--- -- LOGIN FATHER -- ---|*/
+/*|--- -- ------------ -- ---|*/
 
-.login{
+.loginFather{
+    perspective: 1000px;
+}
+
+.loginContent.rotarLogin{
+    transform: rotateY(180deg) translateX(-20px);
+}
+
+.loginContent{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
     width: 440px;
     height: 450px;
+}
+
+.login,
+.loginBack{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
     box-shadow: -1px 1px 5px #00000033;
     border-radius: 15px;
     background-color: #fff;
     transform: translateX(20px);
 }
 
-.login form{
+/*|--- -- ----- -- ---|*/
+/*|--- -- LOGIN -- ---|*/
+/*|--- -- ----- -- ---|*/
+
+.login form,
+.registerBack form{
     margin-right: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
-.login form span{
+.login form span,
+.registerBack form span{
     margin-top: 80px;
     font-weight: bolder;
     font-size: 20px;
 }
 
-.login form label{
+.login form label,
+.registerBack form label{
     position: relative;
     color: #535353c0;
 }
 
-.login form label i{
+.login form label i,
+.registerBack form label i{
     position: absolute;
     top: 17px;
     left: 20px;
 }
 
-.login form label p{
+.login form label p,
+.registerBack form label p{
     position: absolute;
     top: 13px;
     left: 46px;
 }
 
-.login form input[type=email],
-.login form input[type=password]{
+.login form input,
+.registerBack form input,
+.registerBack form select{
     padding: 15px 10px 15px 60px;
     width: 270px;
     border: none;
@@ -69,15 +102,13 @@ main{
     margin-top: 50px;
 }
 
-.login form label:nth-child(3){
-    margin-top: 20px;
+.login form a,
+.registerBack form a{
+    margin-top: 40px;
 }
 
-.login form a{
-    margin-top: 60px;
-}
-
-.login form input[type=button]{
+.login form input[type=button],
+.registerBack form input[type=button]{
     border-radius: 8px;
     border: none;
     padding: 14px 30px;
@@ -87,40 +118,92 @@ main{
     cursor: pointer;
 }
 
-.login form input[type=button]:hover{
+.login form input[type=button]:hover,
+.registerBack form input[type=button]:hover{
     background-color: #026d19;
     transition: .2s ease-in-out;
+}
+
+/*|--- -- ---------- -- ---|*/
+/*|--- -- LOGIN BACK -- ---|*/
+/*|--- -- ---------- -- ---|*/
+
+.loginBack{
+    transform: rotateY(180deg);
+}
+
+/*|--- -- --------------- -- ---|*/
+/*|--- -- REGISTER FATHER -- ---|*/
+/*|--- -- --------------- -- ---|*/
+
+.registerFather{
+    perspective: 1000px;
+}
+
+.registerContent.rotarRegister{
+    transform: rotateY(180deg) translateX(20px);
+}
+
+.registerContent.registerContent form{
+    margin: 0;
+}
+
+.registerContent{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+    width: 520px;
+    height: 550px;
+}
+
+.register,
+.registerBack{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    box-shadow: -1px 1px 5px #00000033;
+    border-radius: 15px;
+    background-color: #fff;
+    transform: translateX(-20px);
 }
 
 /*|--- -- -------- -- ---|*/
 /*|--- -- REGISTER -- ---|*/
 /*|--- -- -------- -- ---|*/
 
-.register{
-    width: 520px;
-    height: 550px;
-    border-radius: 15px;
+.register,
+.loginBack{
     background: linear-gradient(235deg, #BABC4A 0%, #000000 100%), linear-gradient(235deg, #0026AC 0%, #282534 100%), linear-gradient(235deg, #00FFD1 0%, #000000 100%), radial-gradient(120% 185% at 25% -25%, #EEEEEE 0%, #EEEEEE 40%, #7971EA calc(40% + 1px), #7971EA 50%, #393E46 calc(50% + 1px), #393E46 70%, #222831 calc(70% + 1px), #222831 100%), radial-gradient(70% 140% at 90% 10%, #F5F5C6 0%, #F5F5C6 30%, #7DA87B calc(30% + 1px), #7DA87B 60%, #326765 calc(60% + 1px), #326765 80%, #27253D calc(80% + 1px), #27253D 100%);
     background-blend-mode: overlay, lighten, overlay, color-burn, normal;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateX(-20px);
+}
+
+.register{
+    border-radius: 15px;
     z-index: 1;
 }
 
-.register img{
+.register img,
+.loginBack img{
     width: 200px;
     padding-top: 130px;
 }
 
-.register p{
+.register p,
+.loginBack p{
     color: #fff;
     padding-top: 50px;
     font-size: 16px;
 }
 
-.register button{
+.register button,
+.loginBack button{
     margin-top: 60px;
     padding: 15px 25px;
     border-radius: 8px;
@@ -132,86 +215,219 @@ main{
     text-transform: uppercase;
 }
 
-.register button:hover{
+.register button:hover,
+.loginBack button:hover{
     background-color: #026d19;  
     transition: .2s ease-in-out;
+}
+
+/*|--- -- ------------- -- ---|*/
+/*|--- -- REGISTER BACK -- ---|*/
+/*|--- -- ------------- -- ---|*/
+
+.registerBack{
+    transform: rotateY(180deg);
+    background-color: #fff;
+}
+
+.registerBack form{
+    gap: 10px;
+}
+
+.registerBack form span{
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.registerBack form .contentInputsR{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.registerBack form .contentInputsR input[type=text],
+.registerBack form .contentInputsR input[type=number]{
+    width: 190px;
+}
+
+.registerBack form #fileInput {
+    display: none;
+}
+
+.registerBack form .custom-file-container {
+    position: relative;
+    border: none;
+    border-left: 6px solid #0e4c20;
+    border-radius: 6px;
+    box-shadow: 1px 2px 5px #00000033;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    max-width: 270px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 10px;
+}
+
+.hiddeFile{
+    display: none;
+}
+
+.registerBack form .custom-file-container i{
+    position: absolute;
+    top: 17px;
+    left: 10px;
+}
+
+.registerBack form .custom-file-upload {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.registerBack form #selectedFileName {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.registerBack form a{
+    margin-top: 20px;
 }
 
 /*|--- -- ---------- -- ---|*/
 /*|--- -- RESPONSIVE -- ---|*/
 /*|--- -- ---------- -- ---|*/
 
-@media screen and (max-width: 900px) {
-    .wrapper{
-        position: relative;
+@media screen and (max-width: 920px) {
+    .loginContent{
+        width: 400px;
     }
 
-    .login,
-    .register{
-        transform: translateX(0);
-    }
-
-    .login{
-        width: 390px;
-        max-width: 100%;
-        height: 365px;
-        z-index: 10;
-    }
-
-    .login form{
-        margin-right: 0;
-    }
-
-    .login form span{
-        margin-top: 40px;
-    }
-    
-
-    .login form input[type=email],
-    .login form input[type=password]{
-        width: 300px;
-    }
-
-    .login form a{
-        margin-top: 50px;
-    }
-
-    .login form input[type=button]{
-        padding: 12px 30px;
-    }
-
-    .register{
-        position: absolute;
-    }
-
-    .register{
-        width: 520px;
-        max-width: 100%;
-        height: 600px;
-        transform: translateX(0px);
-        transform: translateY(10px);
-        z-index: 1;
+    .registerContent{
+        width: 480px;
+        height: 550px;
     }
 
     .register img{
         width: 170px;
-        padding-top: 30px;
-    }
-    
-    .register p{
-        padding-top: 410px;
-    }
-    
-    .register button{
-        margin-top: 15px;
-        padding: 10px 20px;
-        text-transform: capitalize;
     }
 }
 
-@media screen and (max-width: 390px) {
-    .login form input[type=email],
-    .login form input[type=password]{
-        max-width: 100%;
+@media screen and (max-width: 840px) {
+    main{
+        position: relative;
+    }
+
+    .loginFather{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loginContent{
+        transform: translateX(-20px) translateY(-10px);
+    }
+
+    .login form{
+        margin: 0;
+    }
+
+    .registerFather{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .registerContent{
+        transform: translateX(20px);
+        width: 480px;
+        height: 650px;
+    }
+
+    .register,
+    .loginBack{
+        position: relative;
+    }
+
+    .register picture,
+    .loginBack picture{
+        position: absolute;
+        top: 25px;
+    }
+
+    .register img,
+    .loginBack img{
+        padding: 0;
+    }
+
+    .loginBack img{
+        width: 150px;
+    }
+
+    .register p,
+    .loginBack p{
+        padding-top: 0;
+        position: absolute;
+        bottom: 80px;
+    }
+
+    .register button,
+    .loginBack button{
+        margin-top: 0;
+        position: absolute;
+        bottom: 25px;
+        text-transform: capitalize;
+        padding: 12px 30px;
+    }
+
+    .loginFather.ShowUp,
+    .registerFather.ShowUp{
+        z-index: 10;
+    }
+
+    .loginFather.ABC .loginContent{
+        width: 480px;
+        height: 740px;
+        transform: rotateY(180deg) translateX(0px) translateY(18px);
+    }
+
+    .registerFather.ShowUp .registerContent{
+        width: 480px;
+        height: 550px;
+    }
+
+    .loginContent.rotarLogin,
+    .registerContent.rotarRegister {
+        transform: rotateY(180deg) translateX(0px);
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .registerContent,
+    .loginFather.ABC .loginContent,
+    .registerFather.ShowUp .registerContent{
+        width: 400px;
+    }
+
+    .registerBack form .contentInputsR{
+        flex-direction: column;
+    }
+    
+    .registerBack form .contentInputsR input[type=text],
+    .registerBack form .contentInputsR input[type=number]{
+        width: 270px;
+    }
+
+    .registerBack form a{
+        margin-top: 10px;
+    }
+    
+    .registerBack form span{
+        margin-top: 30px;
+        margin-bottom: 15px;
     }
 }

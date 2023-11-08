@@ -6,48 +6,128 @@
 
     <title>WellSpace - Login</title>
 
+    <!-- ICONO -->
     <link rel="icon" href="./assets/img/home/IconoFull.ico">
 
+    <!-- ESTILOS GENERALES -->
     <link rel="stylesheet" href="./assets/css/general.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 
+    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="wrapper">
         <main>
 
-            <div class="login">
-                <form action="">
-                    <span>Iniciar Sesión</span>
-                    <label>
-                        <i class="fa-regular fa-envelope"></i>
-                        <p>|</p>
-                        <input type="email" placeholder="Digite su correo">
-                    </label>
-                    <label>
-                        <i class="fa-solid fa-key fa-flip-horizontal"></i> 
-                        <p>|</p>
-                        <input type="password" placeholder="Digite su contraseña">
-                    </label>
+            <div class="loginFather ShowUp">
+                <div class="loginContent">
+                    <div class="login">
+                        <form action="">
+                            <span>Iniciar Sesión</span>
+                            <label>
+                                <i class="fa-regular fa-envelope"></i>
+                                <p>|</p>
+                                <input type="email" placeholder="Digite su correo" required>
+                            </label>
+                            <label>
+                                <i class="fa-solid fa-key fa-flip-horizontal"></i> 
+                                <p>|</p>
+                                <input type="password" placeholder="Digite su contraseña" required>
+                            </label>
 
-                    <a href="./home.html">
-                        <input type="button" value="Iniciar Sesión">
-                    </a>
-                </form>
+                            <a href="#">
+                                <input type="button" value="Iniciar Sesión">
+                            </a>
+                        </form>
+                    </div>
+
+                    <div class="loginBack">
+                        <picture>
+                            <img src="./assets/img/Icono.png" alt="Icono">
+                        </picture>
+
+                        <p> ¿Ya tienes una cuenta? </p>
+
+                        <button id="btnLogin">Login</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="register">
-                <picture>
-                    <img src="./assets/img/Icono.png" alt="Icono">
-                </picture>
+            <div class="registerFather">
+                <div class="registerContent">
+                    <div class="register">
+                        <picture>
+                            <img src="./assets/img/Icono.png" alt="Icono">
+                        </picture>
 
-                <p> ¿Aun no te has Registrado? </p>
+                        <p> ¿Aun no te has Registrado? </p>
 
-                <button>Registrarse</button>
+                        <button id="btnRegister">Registrarse</button>
+                    </div>
+
+                    <div class="registerBack">
+                        <form action="">
+                            <span class="titleRegister">Registrarse</span>
+
+                            <!-- PRIMER NOMBRE Y APELLIDOS -->
+                            <div class="contentInputsR">
+                                <label>
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>|</p>
+                                    <input type="text" placeholder="Primer Nombre" required>
+                                </label>
+
+                                <label>
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>|</p>
+                                    <input type="text" placeholder="Apellidos" required>
+                                </label>
+                            </div>
+
+                            <!-- CORREO ELECTRONICO -->
+                            <label>
+                                <i class="fa-regular fa-envelope"></i>
+                                <p>|</p>
+                                <input type="email" placeholder="Digite su correo" required>
+                            </label>
+
+                            <!-- CONTRASEÑA -->
+                            <label>
+                                <i class="fa-solid fa-key fa-flip-horizontal"></i> 
+                                <p>|</p>
+                                <input type="password" placeholder="Digite su clave" required>
+                            </label>
+
+                            <!-- TIPO DE USUARIO -->
+                            <label>
+                                <i class="fa-solid fa-user-gear"></i>
+                                <p>|</p>
+                                <select id="tipoUsuario">
+                                    <option value="">Tipo de Usuario</option>
+                                    <option value="1">Usuario</option>
+                                    <option value="2">Profesional</option>
+                                </select>
+                            </label>
+
+                            <!-- OPCION PARA TIPO DE USUARIO PROFESIONAL (SUBIR HOJA DE VIDA) -->
+                            <div class="custom-file-container hiddeFile">
+                                <input type="file" id="fileInput" accept=".pdf, .docx">
+                                <label for="fileInput" class="custom-file-upload">Subir Hoja de Vida</label>
+                                <p id="selectedFileName" class="file-name"></p>
+                            </div>
+
+                            <a href="">
+                                <input type="button" value="Registrarse">
+                            </a>
+                        </form>
+                    </div>
+                </div>
             </div>
 
         </main>
     </div>
+
+    <script src="./assets/js/login.js"></script>
 </body>
 </html>
