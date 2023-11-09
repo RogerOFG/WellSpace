@@ -51,8 +51,9 @@ ul{
 }
 
 .alertPerfil{
-    top: 20%;
+    top: 180px;
     transform: translate(-50%, 0%);
+    z-index: 1;
 }
 
 .alert-danger{
