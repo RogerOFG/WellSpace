@@ -84,11 +84,40 @@ main{
 .content .perfilInfo{
     background-color: #fff;
     padding: 60px 40px 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.content span{
+.content .boxL span{
     display: flex;
     margin-top: 10px;
+}
+
+.content .boxR{
+    width: 250px;
+    max-width: 100%;
+    padding: 20px 0;
+    max-width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: right;
+}
+
+.content .boxR span{
+    color: #0E6F28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .boxR ion-icon:first-child {
+    margin-right: 5px;
+    padding-bottom: 2px;
+}
+
+.content .boxR ion-icon:last-child{
+    margin-left: 5px;
 }
 
 /*|--- -- MAIN - PERFIL PRO - BOX CONTENT - ABOUT ME -- ---|*/
