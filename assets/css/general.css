@@ -30,6 +30,49 @@ ul{
     opacity: 0;
 }
 
+/*|--- -- ----- -- ---|*/
+/*|--- -- ALERT -- ---|*/
+/*|--- -- ----- -- ---|*/
+
+.alert,
+.alertPerfil{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    width: 500px;
+    max-width: 100%;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 20;
+    border: 1px solid;
+}
+
+.alertPerfil{
+    top: 20%;
+    transform: translate(-50%, 0%);
+}
+
+.alert-danger{
+    background-color: #F8D7D4;
+    color: #842029;
+    border-color: #f8aba4;
+}
+
+.alert-success{
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+
+.alert-warning{
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
 /*|--- -- --------------- -- ---|*/
 /*|--- -- MAIN - CIRCULOS -- ---|*/
 /*|--- -- --------------- -- ---|*/
