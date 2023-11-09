@@ -91,7 +91,7 @@ main{
     flex-wrap: wrap;
 }
 
-.content .perfilInfo div:first-child{
+.content .perfilInfo a div{
     position: absolute;
     top: 20px;
     right: 40px;
@@ -106,7 +106,7 @@ main{
     box-shadow: 1px 1px 3px #00000049;
 }
 
-.content .perfilInfo div:first-child ion-icon{
+.content .perfilInfo a div ion-icon{
     color: #fff;
     font-size: 18px;
 }
@@ -128,7 +128,7 @@ main{
 }
 
 .content .boxR span,
-.content .perfilInfo div:first-child span{
+.content .perfilInfo a div span{
     color: #0E6F28;
     display: flex;
     align-items: center;
