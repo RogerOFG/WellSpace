@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WellSpace - Agendar Seccion</title>
+    <title>WellSpace - Perfil</title>
 
     <link rel="icon" href="./assets/img/home/IconoFull.ico">
 
@@ -14,11 +14,129 @@
 </head>
 <body>
     <div class="wrapper">
-        <a href="./UpdatePerfil.html">
-            <div class="alertPerfil alert-warning">
-                Completa tu Perfil
+        <!-- ALERTA (COMPLETAR PERFIL) -->
+        <div class="alertPerfil alert-warning">
+            Completa tu Perfil
+        </div>
+
+        <!-- PAGINA OCULTA PARA ACTUALIZAR INFORMACIÓN -->
+        <div class="pageUpdate pageHidde">
+            <div class="contentUpdate">
+                <div class="topU">
+                    <h2>Editar Perfil</h2>
+
+                    <div class="close">
+                        <ion-icon class="iconClose" name="close-outline"></ion-icon>
+                    </div>
+                </div>
+                
+                <div class="midU">
+                    <p>El asterisco (*) indica que es obligatorio</p>
+
+                    <form action="" method="">
+                        <h4>Informacón Personal</h4>
+
+                        <!-- NOMBRE -->
+                        <div class="contentInput">
+                            <label>Nombre*</label>
+                            <input type="text">
+                        </div>
+
+                        <!-- APELLIDOS -->
+                        <div class="contentInput">
+                            <label>Apellidos*</label>
+                            <input type="text">
+                        </div>
+
+                        <!-- EDAD -->
+                        <div class="contentInput">
+                            <label>Edad*</label>
+                            <input type="number">
+                        </div>
+
+                        <!-- SOBRE MI -->
+                        <div class="contentInput">
+                            <label>Sobre mi*</label>
+                            <textarea name=""cols="30" rows="5"></textarea>
+                        </div>
+
+                        <h4>Ubicación</h4>
+
+                        <!-- PAÍS/REGION -->
+                        <div class="contentInput">
+                            <label>País/región*</label>
+                            <input type="text">
+                        </div>
+
+                        <!-- CIUDAD -->
+                        <div class="contentInput">
+                            <label>Ciudad</label>
+                            <input type="text">
+                        </div>
+
+                        <h4>Informacón de Contacto</h4>
+
+                        <!-- NRO. CELULAR -->
+                        <div class="contentInput">
+                            <label>Nro. Celular</label>
+                            <input type="number">
+                        </div>
+
+                        <!-- CORREO ELECTRONICO -->
+                        <div class="contentInput">
+                            <label>Correo Electronico*</label>
+                            <input type="email" disabled>
+                        </div>
+
+                        <!-- URL LINKEDIN -->
+                        <div class="contentInput">
+                            <label>URL de Linkedin Personal</label>
+                            <input type="text">
+                        </div>
+
+                        <h4>Archivos / Imagen</h4>
+
+                        <!-- HOJA DE VIDA -->
+                        <div class="contentInput">
+                            <input type="file" name="hojaVida" id="fileInput" accept=".pdf, .docx">
+                            <div class="custom-file-container">
+                                <label for="fileInput" class="custom-file-upload">Actualizar Hoja de Vida</label>
+                                <p id="selectedFileName" class="file-name"></p>
+                                <a id="downloadLink" href="" style="display:none" download>Descargar</a>
+                            </div>
+                        </div>
+
+                        <!-- FOTO PERFIL -->
+                        <div class="contentInput">
+                            <input type="file" name="imgPerfil" id="fileInputImg" accept="image/*" onchange="previewImage('fileInputImg', 'imgPreview', 'selectedFileNameImg')">
+                            <div class="custom-file-container">
+                                <label for="fileInputImg" class="custom-file-upload">Foto de Perfil</label>
+                                <div class="fileImgMuestra">
+                                    <img id="imgPreview" src="./php/img/">
+                                </div>
+                                <p id="selectedFileNameImg" class="file-name"></p>
+                            </div>
+                        </div>
+
+                        <!-- BANNER -->
+                        <div class="contentInput">
+                            <input type="file" name="bannerPerfil" id="fileInputBanner" accept="image/*"  onchange="previewImage('fileInputBanner', 'bannerPreview', 'selectedFileNameBanner')">
+                            <div class="custom-file-container">
+                                <label for="fileInputBanner" class="custom-file-upload">Banner de Perfil</label>
+                                <div class="fileImgMuestraBanner">
+                                    <img id="bannerPreview" src="./php/banner/">
+                                </div>
+                                <p id="selectedFileNameBanner" class="file-name"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="botU">
+                    <button>Guardar</button>
+                </div>
             </div>
-        </a>
+        </div>
 
         <header>
             <picture>
@@ -42,28 +160,27 @@
 
                     <div class="content">
                         <div class="banner">
-                            <div class="pictureBanner">
-                                <img class="imgBanner" src="" alt="">
-                            </div>
+                            <!-- IMAGEN BANNER -->
+                            <div class="pictureBanner" style="background-image: url(./php/banner/);"></div>
 
+                            <!-- FOTO PERFIL -->
                             <picture>
-                                <img src="./assets/img/profesionals/psicologo1.jpg" alt="">
+                                <img src="./php/img/" alt="">
                             </picture>
                         </div>
 
+                        <!-- INFORMACION DEL PERFIL -->
                         <div class="perfilInfo">
                             <div class="boxL">
                                 <h2>Dra. Maria Garcia</h2>
                                 <span>Barranquilla, Colombia</span>
                             </div>
 
-                            <a href="./ModificarPerfil">
-                                <div>
-                                    <span>
-                                        <ion-icon name="pencil-outline"></ion-icon>
-                                    </span>
-                                </div>
-                            </a>
+                            <div class="editData" id="pencilUpdate">
+                                <span>
+                                    <ion-icon name="pencil-outline"></ion-icon>
+                                </span>
+                            </div>
 
                             <div class="boxR">
                                 <span>
@@ -74,6 +191,7 @@
                         </div>
                     </div>
 
+                    <!-- ACERCA DE -->
                     <div class="aboutMe">
                         <h3>Acerca de</h3>
                         <p>
@@ -98,6 +216,7 @@
     </div>
 
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/perfil.js"></script>
 
     <!-- IONICONS -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
